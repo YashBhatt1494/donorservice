@@ -1,3 +1,5 @@
+import java.util.Date;
+
 class DonorContectInfo{
 	String email;
 	String phone;
@@ -53,6 +55,7 @@ class DonorBasicInfo{
 	char gender;
 	int birthDate,birthMont;
 	int birthYear;
+	Date birth_date=new Date();
 	
 	private boolean checkFirstName(String firtsName) {
 		if(firtsName.length()>0)
@@ -170,9 +173,9 @@ class DonorLoginInfo{
 			return password;
 	}
 
-	public DonorLoginInfo(String username ) {
+	public DonorLoginInfo(String username, String password ) {
 		this.username = username;
-		//this.password = password;
+		this.password = password;
 		chechUsername(username);
 	//	checkPassword(password);
 		
